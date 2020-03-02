@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-init-method="myInit" default-destroy-method="cleanUp">
+
+<bean id="parentTriangle" class="org.sharon.spring.Triangle" >
+<property name="points">
+<list>
+<ref bean="point0"/>
+<ref bean="point1"/>
+
+
+</list>
+
+</property>
+</bean>
+
+
+<!-- <bean id="triangle1" class="org.sharon.spring.Triangle" parent="parentTriangle">
+<property name="points">
+
+<list merge="true">
+<ref bean="point2"/>
+</list>
+
+
+</property>
+
+
+</bean> -->
+<!-- <bean id="triangle2" class="org.sharon.spring.Triangle" parent="parentTriangle">
+<property name="Point1" ref="point1"></property>
+</bean> -->
+
+<bean id="point0" class="org.sharon.spring.Point">
+<property name="x" value="0" ></property>
+<property name="y" value="0"> </property>
+</bean>
+
+<bean id="point1" class="org.sharon.spring.Point">
+<property name="x" value="0" ></property>
+<property name="y" value="20"> </property>
+</bean>
+
+<bean id="point2" class="org.sharon.spring.Point">
+<property name="x" value="20" ></property>
+<property name="y" value="0"> </property>
+</bean>
+
+</beans>
+
+
+
+
+
+
+
+<!-- <property name="type" value="Equilateral"></property> -->
+
+<!-- <constructor-arg type="java.lang.String" value="Equilateral"></constructor-arg>
+ -->
